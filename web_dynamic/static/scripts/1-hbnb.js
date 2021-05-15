@@ -1,13 +1,18 @@
 /* jQuery script that listens for changes on each INPUT checkbox tag*/
 /* global $ */
 $('document').ready(function () {
+  selected = []
   $('li input').click( function () {
-    alert("js is working");
-    let selected = [];
-    $('input:checked').each(function () {
-      selected.append($(this).attr('data-name'));
-    });
-    if (selected.length == 0) {selected.append('&nbsp;')};
-    $('#selected').text(selected);
+    if ($(this).prop('checked') == true) {
+      selected.push($(this).attr('data-name'));
+    } else {
+      delete selected.pop($(this).attr('data-name'));
+    }
+    if (selected.length == 0) {
+        $('#selected').html('&nbsp;')
+    }
+    else {
+    $('#selected').text(selected.join(', '));
+    }
   });
 });
