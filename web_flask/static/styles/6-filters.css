@@ -18,12 +18,12 @@
 	border-right: 1px solid #DDDDDD;
 }
 
-.filter_amenities {
+.amenities {
 	display: inline;
 	vertical-align: middle;
-	height: 100%;
 	float: left;
-    width: 25%;
+	height: 100%;
+    	width: 25%;
 
 	line-height: 20px;
 }
@@ -32,7 +32,7 @@
 	list-style-type: none;
 	display: none;
 	background-color: #FAFAFA;
-	width: 100%;
+	width: 1.0;
 
 	margin-left: -1px;
 	margin-top: 8px;
@@ -43,6 +43,8 @@
 
 	border: 1px solid #DDDDDD;
 	border-radius: 4px;
+	position: relative;
+	z-index: 999;
 }
 
 .locations:hover .popover {
@@ -57,9 +59,6 @@ ul {
 	list-style-type: none;
 	padding: 0px;
 	padding-bottom: 20px;
-}
-
-li {
 }	
 
 h2 {
