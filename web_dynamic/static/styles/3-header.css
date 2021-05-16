@@ -16,6 +16,14 @@ header {
     order: 1;
     align-self: left;
 }
-.available {
+#api_status {
+    order: 2;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: hsl(0, 0%, 80%);
+    margin-right: 30px
+}
+#api_status.available {
     background-color: #ff545f;
 }
