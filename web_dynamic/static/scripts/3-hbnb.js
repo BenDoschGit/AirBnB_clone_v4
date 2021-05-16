@@ -39,15 +39,16 @@ $('document').ready(function () {
 </article> */
   const criteria = '';
   $.ajax(
-    { type: 'POST',
-    url: 'http://0.0.0.0:5001/api/v1/places_search',
-    data: criteria,
-    dataType: 'json',
-    contentType: 'application/json',
-    success: function (getallplaces) {
-    getallplaces.each(function () {
-      $('section.places').append(`<article>
-      <div class="title_box">
+    {
+      type: 'POST',
+      url: 'http://0.0.0.0:5001/api/v1/places_search',
+      data: criteria,
+      dataType: 'json',
+      contentType: 'application/json',
+      success: function (getallplaces) {
+        getallplaces.each(function () {
+          $('section.places').append(`<article>
+        <div class="title_box">
       <h2>` + $(this.name) + `</h2>
         <div class="price_by_night">` + $(this.price_by_night) + `</div>
       </div>
@@ -62,6 +63,7 @@ $('document').ready(function () {
       <div class="description">` + $(this.description) +
       `</div>
       </article>)`);
-    };
-  });
+        });
+      }
+    });
 });
