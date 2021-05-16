@@ -6,4 +6,16 @@ header {
     background-repeat: no-repeat;
     background-position: 20px center;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center
+}
+.logo {
+    order: 1;
+    align-self: left;
+}
+.available {
+    background-color: #ff545f;
 }
