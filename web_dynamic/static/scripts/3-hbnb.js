@@ -42,11 +42,11 @@ $('document').ready(function () {
     {
       type: 'POST',
       url: 'http://0.0.0.0:5001/api/v1/places_search',
-      data: criteria,
+      data: JSON.stringify(criteria),
       dataType: 'json',
       contentType: 'application/json',
       success: function (getallplaces) {
-        getallplaces.each(function () {
+        getallplaces.forEach(function () {
           $('section.places').append(`<article>
         <div class="title_box">
       <h2>` + $(this.name) + `</h2>
